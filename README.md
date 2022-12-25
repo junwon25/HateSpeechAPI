@@ -29,6 +29,9 @@ $ cd HateSpeechAPI
 │   └── Final_hatespeech_traincode.ipynb
 └── app.py
 ```
+koco_test_labeling.xlsx 는 https://github.com/kocohub/korean-hate-speech.git 의 test.no_label.tsv 를 labeling 한 파일임.
+koco_train_labeled.txt 는 https://github.com/kocohub/korean-hate-speech.git 의 labeled/train.tsv 파일을 txt로 옮긴 파일임.
+ssibal_train_labeled.txt 는 https://ssibaljinjja.wordpress.com/ 웹페이지를 크롤링해 labeling 한 파일임.
 ## API 설명
 
 ### 1) /prediction [POST]
