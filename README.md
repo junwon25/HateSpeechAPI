@@ -33,20 +33,7 @@ koco_test_labeling.xlsx 는 https://github.com/kocohub/korean-hate-speech.git �
 koco_train_labeled.txt 는 https://github.com/kocohub/korean-hate-speech.git 의 labeled/train.tsv 파일을 txt로 옮긴 파일임.
 ssibal_train_labeled.txt 는 https://ssibaljinjja.wordpress.com/ 웹페이지를 크롤링해 labeling 한 파일임.
 ## API 설명
-'''
-$# API용
-$        content = request.get_json(silent=True)
-$        hateee = content['chat']
-$        hateee = get_prediction(hateee)
-$        return hateee
-$
-$        #Demo 사이트 용
-$#         val = request.form #index.html에서 name을 통해 submit한 값들을 val 객체로 전달
-$#         print(val)
-$#         for key, value in val.items():
-$#            hateee = get_prediction(value)
-$#         return render_template("prediction.html",result = hateee) #name은 key, name에 저장된 값은 value
-'''
+
 ### 1) /prediction [POST]
 **Request 예시**
 ```
