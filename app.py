@@ -80,18 +80,17 @@ def hello():
 def predict():
     if request.method == 'POST':
         # API용
-        # content = request.get_json(silent=True)
-        # hateee = content['chat']
-        # hateee = get_prediction(hateee)
-        # return hateee
+        content = request.get_json(silent=True)
+        hateee = content['chat']
+        hateee = get_prediction(hateee)
+        return hateee
 
         #Demo 사이트 용
-        val = request.form #index.html에서 name을 통해 submit한 값들을 val 객체로 전달
-        print("웅진파이팅\n")
-        print(val)
-        for key, value in val.items():
-           hateee = get_prediction(value)
-        return render_template("prediction.html",result = hateee) #name은 key, name에 저장된 값은 value
+#         val = request.form #index.html에서 name을 통해 submit한 값들을 val 객체로 전달
+#         print(val)
+#         for key, value in val.items():
+#            hateee = get_prediction(value)
+#         return render_template("prediction.html",result = hateee) #name은 key, name에 저장된 값은 value
 
 #FLASK_ENV=development FLASK_APP=app.py flask run
 if __name__ =="__main__":
