@@ -42,6 +42,13 @@ $ cd HateSpeechAPI
 
 - tokenizer와 model은 monologg님의 pretrained KoELECTRA model을 사용해 Fine tuning 후 사용 (https://github.com/monologg/KoELECTRA)
 
+## 모델 학습
+현재 사용된 모델은 koco_train_labeled.txt, ssibal_train_labeled.txt 두 가지를 합친 train dataset을 사용함.
+Final_hatespeech_traincode.ipynb 파일은 훈련하는 파트와 검증하는 파트 총 2가지 섹션으로 구성되어있음
+txt를 tsv로 변환하는코드, 데이터셋을 구축하는코드, 훈련을 시작하는 코드는 모두 Final_hatespeech_traincode.ipynb에 주석으로 정의되어있으며, Jupyter Notebook이나 Google Colab을 사용해 각 cell을 순서대로 run 하면서 학습을 진행하면 됨.
+
+모델 확인 : https://drive.google.com/file/d/13dx6djTNcncjLuZx1d56WAPD4c6Kgd-Q/view?usp=sharing\
+
 ## API 설명
 
 사용자가 입력한 문장이 욕설로 판별되면 1, 그렇지 않은 경우에는 0이 반환됩니다.
